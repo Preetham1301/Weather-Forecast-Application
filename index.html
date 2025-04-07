@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="/src/output.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-sky-300 to-blue-100 min-h-screen font-sans text-gray-800 flex flex-col items-center p-6">
 
+  <!-- 🌤️ Header -->
+  <header class="text-center mb-10">
+    <h1 class="text-5xl font-extrabold drop-shadow-lg">🌦️ Weather Dashboard</h1>
+    <p class="text-lg mt-2 text-gray-700">Your personal forecast, right here.</p>
+  </header>
+
+  <!-- 🔍 Search Controls -->
+  <section class="w-full max-w-3xl flex flex-col sm:flex-row items-center gap-4 mb-6">
+    <input
+      id="cityInput"
+      type="text"
+      placeholder="Enter city"
+      class="flex-1 p-4 rounded-xl border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+    />
+    <button
+      id="searchBtn"
+      class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all shadow-md"
+    >
+      🔍 Search
+    </button>
+    <button
+      id="currentLocationBtn"
+      class="bg-emerald-500 text-white px-6 py-3 rounded-xl hover:bg-emerald-600 transition-all shadow-md"
+    >
+      📍 Use Location
+    </button>
+  </section>
+
+  <!-- ⏬ Dropdown History -->
+  <section class="mb-6 w-full max-w-3xl">
+    <select
+      id="dropdown"
+      class="w-full p-3 rounded-xl border border-gray-300 shadow-md bg-white text-gray-700"
+    >
+      <option value="">-- Recently Searched Cities --</option>
+    </select>
+  </section>
+
+  <!-- ⚠️ Error Box -->
+  <div
+    id="errorBox"
+    class="hidden mb-4 text-center text-red-600 font-semibold"
+  ></div>
+
+  <!-- 🌡️ Current Weather Display -->
+  <section
+    id="weatherDisplay"
+    class="hidden w-full max-w-2xl bg-white/40 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20 space-y-4 text-center"
+  >
+    <h2 id="cityName" class="text-2xl font-bold text-blue-800"></h2>
+    <img id="weatherIcon" class="mx-auto w-24 h-24" src="" alt="Weather Icon"/>
+    <p id="temp" class="text-4xl font-bold text-gray-800"></p>
+    <p id="description" class="italic text-gray-600"></p>
+
+    <div class="flex justify-around text-sm sm:text-base text-gray-700 mt-4">
+      <div>
+        <p class="font-semibold">🌬️ Wind</p>
+        <p id="wind"></p>
+      </div>
+      <div>
+        <p class="font-semibold">💧 Humidity</p>
+        <p id="humidity"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🗓️ Forecast Grid -->
+  <section class="w-full max-w-6xl mt-10">
+    <h3 class="text-2xl font-semibold mb-4">📅 5-Day Forecast</h3>
+    <div id="forecast" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      <!-- Forecast cards will be injected by JS -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
