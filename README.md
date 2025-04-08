@@ -14,7 +14,7 @@ File Structure
 'index.js' : Contains the javascript code for getting weather details based on user's input or user's current location.
 
 API KEY
-To access the https://www.weatherapi.com/, you need an API key. In this application, the key is stored in the variable fetchkey.
+To access the https://openweathermap.org/, you need an API key. In this application, the key is stored in the variable fetchkey.
 
 Local Storage
 The application uses the browser's local storage to maintain a list of recently searched cities.
@@ -30,7 +30,8 @@ Link of the github
 PLease find the github link here->
 
 Link of my hosted Weather App
-https://weathernuts.netlify.app/
+https://weather-forecast-application-hog9.vercel.app/
 
 Author
+<br>
 Abbaraboina Preetham
