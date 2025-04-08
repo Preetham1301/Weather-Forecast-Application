@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build": "tailwindcss -i ${INPUT_CSS:-./src/input.css} -o ${OUTPUT_CSS:-./src/output.css} --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Preet",
+  "license": "MIT",
+  "description": "A weather application built with JavaScript and Tailwind CSS.",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   }
