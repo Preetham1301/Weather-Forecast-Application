@@ -27,7 +27,7 @@ Dependencies
 weatherapi API: Used to fetch weather data
 
 Link of the github
-PLease find the github link here->
+PLease find the github link here->https://github.com/Preetham1301/Weather-Forecast-Application
 
 Link of my hosted Weather App
 https://weather-forecast-application-hog9.vercel.app/
